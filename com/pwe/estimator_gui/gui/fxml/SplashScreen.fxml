@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../stylesheet/splash.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwe.estimator_gui.controller.Controller_Splash">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="610.0" fitWidth="800.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/PWE_Landing_page_splash-02.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutY="134.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane layoutX="-8.0" layoutY="134.0" prefHeight="242.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="137.0" fitWidth="159.0" layoutX="332.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/PWE_LOGO-02.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="title" alignment="CENTER" layoutX="186.0" layoutY="155.0" prefHeight="52.0" prefWidth="471.0" text="Publication Work Estimator" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Label fx:id="version" alignment="CENTER" layoutX="8.0" layoutY="207.0" prefHeight="21.0" prefWidth="792.0" text="Version: 20.01.01" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Pane fx:id="info_bg" layoutY="472.0" prefHeight="130.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="332.0" layoutY="48.0" spacing="5.0">
+               <children>
+                  <Label fx:id="powered" text="Powered by" />
+                  <ImageView fitHeight="34.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/72ppi/plateAsset%205.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <HBox layoutY="470.0" prefHeight="3.0" prefWidth="800.0">
+         <children>
+            <HBox fx:id="loading" prefHeight="17.0" prefWidth="0.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

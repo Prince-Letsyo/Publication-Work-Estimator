@@ -1,0 +1,41 @@
+@import url(variables/reset.css);
+
+#root_ {
+    -fx-background-color: #423A42;
+}
+
+.label {
+    -fx-text-fill: whitesmoke;
+}
+
+.menu-button, .button {
+    -fx-background-color: #F46B1A;
+    -fx-text-fill: whitesmoke;
+}
+
+#btnCancel {
+    -fx-background-color: whitesmoke;
+    -fx-border-width: 2px;
+    -fx-border-color: #F46B1A;
+    -fx-border-radius: 2px;
+    -fx-text-fill: #F46B1A;
+}
+
+#msg   {
+    -fx-font-weight: 600;
+    -fx-font-size: 17;
+}
+
+.button {
+    -fx-font-weight: bold;
+}
+
+.menu-button .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: whitesmoke;
+}
+
+.menu-item .label {
+    -fx-text-fill: black;
+    -fx-font-weight: 500;
+}

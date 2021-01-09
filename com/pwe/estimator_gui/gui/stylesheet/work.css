@@ -1,0 +1,59 @@
+@import url(variables/reset.css);
+
+#now, #paper_B, #paperInput, #workSpace {
+    -fx-background-color: mainColor;
+}
+
+#paperScroll {
+    -fx-outline: none;
+}
+
+.menu-button {
+    -fx-background-color: button;
+}
+
+.menu-item .label {
+    -fx-text-fill: black;
+    -fx-font-weight: 400;
+}
+
+#paperInput .label {
+    -fx-text-fill: whitesmoke;
+}
+
+#paperInput .text-field {
+    -fx-font-style: italic;
+}
+
+#btnCollapse_2, #btnCollapse1 {
+    -fx-background-radius: 100px;
+}
+
+.scroll-pane,.scroll-bar {
+    -fx-background-color: #423A42;
+}
+
+.scroll-bar> .thumb{
+    -fx-background-color: #F46B1A;
+    -fx-background-radius: 34;
+    -fx-opacity: 0.5;
+}
+.scroll-bar> .thumb:hover,.scroll-bar> .thumb:pressed{
+    -fx-opacity: 1;
+}
+
+.button, .menu-button {
+    -fx-font-weight: bold;
+}
+
+#paperInput #param, #paperInput #material, #paperInput #labour, #proTitle_, #export_ {
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F46B1A;
+}
+
+#projectName {
+    -fx-font-size: 17px;
+    -fx-font-weight: 400;
+    -fx-font-style: italic;
+}

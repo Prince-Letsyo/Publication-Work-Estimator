@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="bg_home" alignment="TOP_CENTER" prefHeight="957.0" prefWidth="1267.0" styleClass="root" stylesheets="@../stylesheet/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwe.estimator_gui.controller.Controller_home">
+   <children>
+      <VBox alignment="CENTER" prefHeight="99.0" prefWidth="1267.0">
+         <children>
+            <AnchorPane />
+         </children>
+      </VBox>
+      <AnchorPane>
+         <children>
+            <AnchorPane prefHeight="605.0" prefWidth="1267.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane layoutX="233.0">
+                     <children>
+                        <ImageView fitHeight="605.0" fitWidth="803.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assert/PWE_Landing_page-01.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <FlowPane alignment="CENTER" layoutY="625.0" prefHeight="33.0" prefWidth="1267.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="50.0" prefWidth="735.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="25.0">
+                           <children>
+                              <Button fx:id="paper" mnemonicParsing="false" onAction="#paperWork" text="PaperWork">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assert/icons8_paper_512px_2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="book" mnemonicParsing="false" onAction="#bookWork" text="BookWork">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assert/icons8_book_512px_2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="period" mnemonicParsing="false" onAction="#periodWork" text="PeriodicWork">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assert/icons8_planner_512px_2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

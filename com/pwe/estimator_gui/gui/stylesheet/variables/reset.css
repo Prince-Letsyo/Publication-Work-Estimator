@@ -1,0 +1,27 @@
+@import url(color.css);
+@import url(font.css);
+
+.root {
+    -fx-background-color: mainColor;
+    -fx-font-family: mainFont;
+    -fx-font-size: 16px;
+}
+
+.button {
+    -fx-background-color: button;
+    -fx-text-fill: buttonText;
+}
+
+.label {
+    -fx-text-fill: buttonText;
+}
+
+.button:hover,.menu-button:hover {
+    -fx-background-color: #aa4e12;
+    -fx-text-fill: whitesmoke;
+}
+
+
+
+
+

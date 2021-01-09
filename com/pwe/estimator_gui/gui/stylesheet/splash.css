@@ -1,0 +1,27 @@
+
+.root{
+    -fx-background-color: #423A42;
+}
+
+#title{
+    -fx-font-weight: bold;
+    -fx-font-size: 35;
+    -fx-text-fill: whitesmoke;
+}
+
+#progress,#version{
+    -fx-font-style: italic;
+    -fx-text-fill: whitesmoke;
+}
+#version{
+    -fx-font-style:italic;
+}
+
+#powered{
+    -fx-font-style:italic;
+    -fx-text-fill: whitesmoke;
+}
+
+#loading{
+    -fx-background-color: #F46B1A;
+}

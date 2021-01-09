@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefWidth="789.0" spacing="20.0" stylesheets="@../stylesheet/list.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwe.estimator_gui.controller.ControllerListTitleDisplay">
+   <children>
+      <HBox fx:id="title_list" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="786.0" stylesheets="@../stylesheet/list.css">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="439.0">
+               <children>
+                  <Label fx:id="listTitle" text="Label" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="2.5" top="2.5" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

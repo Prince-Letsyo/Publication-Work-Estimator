@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="957.0" prefWidth="1267.0" styleClass="root" stylesheets="@../stylesheet/work.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pwe.estimator_gui.controller.Controller_book">
+   <fx:define>
+       
+   </fx:define>
+    <children>
+        <HBox prefHeight="47.0" prefWidth="1227.0" spacing="15.0">
+         <children>
+            <AnchorPane prefHeight="37.0" prefWidth="531.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <children>
+                  <GridPane hgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_Return" alignment="CENTER" mnemonicParsing="false" onAction="#Return" text="Home">
+                           <graphic>
+                              <ImageView fitHeight="71.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assert/icons8_home_512px_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <MenuButton fx:id="st_s_" mnemonicParsing="false" text="Stock size" GridPane.columnIndex="2">
+                          <items>
+                              <RadioMenuItem fx:id="stZero" mnemonicParsing="false" onAction="#stChange" text="A0">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="stockPaper" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="stOne" mnemonicParsing="false" onAction="#stChange" text="A1" toggleGroup="$stockPaper" />
+                              <RadioMenuItem fx:id="stTwo" mnemonicParsing="false" onAction="#stChange" text="A2" toggleGroup="$stockPaper" />
+                              <RadioMenuItem fx:id="stThree" mnemonicParsing="false" onAction="#stChange" text="A3" toggleGroup="$stockPaper" />
+                              <RadioMenuItem fx:id="stFour" mnemonicParsing="false" onAction="#stChange" text="A4" toggleGroup="$stockPaper" />
+                          </items>
+                        </MenuButton>
+                        <MenuButton fx:id="ma_s_" mnemonicParsing="false" text="Machine size" GridPane.columnIndex="3">
+                          <items>
+                              <RadioMenuItem fx:id="M1" mnemonicParsing="false" onAction="#mChange" text="Sord">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="machinePaper" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="M2" mnemonicParsing="false" onAction="#mChange" text="Multilith" toggleGroup="$machinePaper" />
+                              <RadioMenuItem fx:id="M3" mnemonicParsing="false" onAction="#mChange" text="Heidelberg MO" toggleGroup="$machinePaper" />
+                              <RadioMenuItem fx:id="M4" mnemonicParsing="false" onAction="#mChange" text="GTO" toggleGroup="$machinePaper" />
+                              <RadioMenuItem fx:id="M5" mnemonicParsing="false" onAction="#mChange" text="S-Offset" toggleGroup="$machinePaper" />
+                              <RadioMenuItem fx:id="M6" mnemonicParsing="false" onAction="#mChange" text="Speedmaster 72" toggleGroup="$machinePaper" />
+                          </items>
+                        </MenuButton>
+                        <MenuButton fx:id="unit__" mnemonicParsing="false" text="Unit Measurement" textFill="#fff5f5" GridPane.columnIndex="4">
+                          <items>
+                              <RadioMenuItem fx:id="unitOne" mnemonicParsing="false" onAction="#unitChange" text="Inches">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="unit_" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="unitTwo" mnemonicParsing="false" onAction="#unitChange" text="Picas" toggleGroup="$unit_" />
+                              <RadioMenuItem fx:id="unitThree" mnemonicParsing="false" onAction="#unitChange" text="Centimeter" toggleGroup="$unit_" />
+                              <RadioMenuItem fx:id="unitFour" mnemonicParsing="false" onAction="#unitChange" text="Millimeter" toggleGroup="$unit_" />
+                          </items>
+                        </MenuButton>
+                        <MenuButton fx:id="fn_s_" mnemonicParsing="false" text="Finish Size" GridPane.columnIndex="1">
+                          <items>
+                              <RadioMenuItem fx:id="fnTwo" mnemonicParsing="false" onAction="#fnChange" text="A2">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="finishPaper" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="fnThree" mnemonicParsing="false" onAction="#fnChange" text="A3" toggleGroup="$finishPaper" />
+                              <RadioMenuItem fx:id="fnFour" mnemonicParsing="false" onAction="#fnChange" text="A4" toggleGroup="$finishPaper" />
+                              <RadioMenuItem fx:id="fnFive" mnemonicParsing="false" onAction="#fnChange" text="A5" toggleGroup="$finishPaper" />
+                              <RadioMenuItem fx:id="fnSix" mnemonicParsing="false" onAction="#fnChange" text="A6" toggleGroup="$finishPaper" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <VBox.margin>
+            <Insets bottom="35.0" top="5.0" />
+         </VBox.margin></HBox>
+        <HBox fx:id="workSpace" VBox.vgrow="ALWAYS">
+            <children>
+                <ScrollPane fx:id="paperScroll" hbarPolicy="NEVER" prefHeight="899.0" prefWidth="465.0">
+                    <content>
+                        <VBox fx:id="paperInput" alignment="TOP_CENTER" prefHeight="1191.0" prefWidth="439.0">
+                            <children>
+                                <VBox fx:id="sample">
+                                    <children>
+                                        <Label fx:id="param" prefHeight="23.0" prefWidth="366.0" text="Params">
+                                            <font>
+                                                <Font name="System Bold" size="20.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                            </VBox.margin>
+                                 <padding>
+                                    <Insets left="16.0" />
+                                 </padding>
+                                        </Label>
+                                        <GridPane hgap="10.0" prefHeight="340.0" prefWidth="389.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="146.0" />
+                                                <ColumnConstraints halignment="CENTER" maxWidth="142.0" minWidth="104.0" prefWidth="113.33334350585938" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="108.66665649414062" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                                                <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="35.0" valignment="CENTER" vgrow="ALWAYS" />
+                                                <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="33.0" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" valignment="CENTER" vgrow="ALWAYS" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="Finish Size" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                                <Label text="Machine Size" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                                </Label>
+                                                <Label prefHeight="25.0" prefWidth="101.0" text="Stock Size" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="fn_y" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" promptText="Width" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Mn_x" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" promptText="Length" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Mn_y" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" promptText="Width" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                                                <TextField fx:id="Sc_y" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" promptText="Width" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Sc_x" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" promptText="Length" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="fn_x" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="115.0" promptText="Length" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Label text="Quantity" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Qty" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+                                                <Label text="Spoilage (%)" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Spi" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="88.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                    <TextField fx:id="allow" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label text="Allowance" GridPane.rowIndex="7" />
+                                    <TextField fx:id="pages" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="88.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label text="No. of pages" GridPane.rowIndex="6" />
+                                    <Label text="Spine" GridPane.rowIndex="5" />
+                                    <TextField fx:id="Spine" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="88.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" top="20.0" />
+                                    </VBox.margin>
+                                </VBox>
+                                <VBox fx:id="M" prefWidth="358.0" spacing="15.0">
+                                    <children>
+                              <HBox alignment="CENTER_LEFT" spacing="15.0">
+                                 <children>
+                                              <Label fx:id="material" alignment="CENTER" prefHeight="34.0" prefWidth="129.0" text="Material">
+                                                  <font>
+                                                      <Font name="Calibri Bold" size="20.0" />
+                                                  </font>
+                                              </Label>
+                                    <Separator fx:id="sep_M" blendMode="MULTIPLY" prefHeight="1.0" prefWidth="225.0" visible="false" />
+                                    <Button fx:id="btnCollapse1" mnemonicParsing="false" onAction="#collapse_1">
+                                       <graphic>
+                                          <ImageView fx:id="up_1" fitHeight="17.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assert/icons8_angle_up_512px_1.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                 </children>
+                              </HBox>
+                                        <GridPane fx:id="M_2" hgap="10.0" prefHeight="340.0" prefWidth="377.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="147.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="108.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="Ream Cost" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <Label text="Plate Cost" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                                </Label>
+                                                <Label prefHeight="25.0" prefWidth="132.0" text="Separation Cost" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Pl" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField fx:id="Sp_c" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Rm" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField fx:id="Ov_C" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label prefHeight="25.0" prefWidth="143.0" text="Overhead Cost (%)" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+                                                <Label text="Colour" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647">
+                                       <children>
+                                          <GridPane prefHeight="27.0" prefWidth="216.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <RadioButton fx:id="one" mnemonicParsing="false" onMouseClicked="#choose" text="1" textFill="WHITE">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="color" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="two" mnemonicParsing="false" onMouseClicked="#choose" text="2" textFill="WHITE" toggleGroup="$color" GridPane.columnIndex="1" />
+                                                <RadioButton fx:id="three" mnemonicParsing="false" onMouseClicked="#choose" text="3" textFill="WHITE" toggleGroup="$color" GridPane.columnIndex="2" />
+                                                <RadioButton fx:id="four" mnemonicParsing="false" onMouseClicked="#choose" text="4" textFill="WHITE" toggleGroup="$color" GridPane.columnIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Cover Colour" GridPane.rowIndex="1" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="129.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <children>
+                                          <GridPane prefHeight="27.0" prefWidth="216.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <RadioButton fx:id="one_cover" mnemonicParsing="false" onMouseClicked="#choose_cover" text="1" textFill="WHITE">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="color1" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="two_cover" mnemonicParsing="false" onMouseClicked="#choose_cover" text="2" textFill="WHITE" toggleGroup="$color1" GridPane.columnIndex="1" />
+                                                <RadioButton fx:id="three_cover" mnemonicParsing="false" onMouseClicked="#choose_cover" text="3" textFill="WHITE" toggleGroup="$color1" GridPane.columnIndex="2" />
+                                                <RadioButton fx:id="four_cover" mnemonicParsing="false" onMouseClicked="#choose_cover" text="4" textFill="WHITE" toggleGroup="$color1" GridPane.columnIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="25.0" prefWidth="143.0" text="Cost of film/flat" GridPane.rowIndex="6" />
+                                    <TextField fx:id="film_C" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label prefHeight="25.0" prefWidth="143.0" text="Coloured pages" GridPane.rowIndex="7" />
+                                    <TextField fx:id="Coloured_pages" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" top="20.0" />
+                                    </VBox.margin>
+                                </VBox>
+                                <VBox fx:id="L" spacing="15.0">
+                                    <children>
+                              <HBox alignment="CENTER_LEFT" spacing="15.0">
+                                 <children>
+                                              <Label fx:id="labour" alignment="CENTER" prefHeight="23.0" prefWidth="79.0" text="Labour">
+                                                  <font>
+                                                      <Font name="Calibri Bold" size="20.0" />
+                                                  </font>
+                                              </Label>
+                                    <Separator fx:id="sep_L" blendMode="MULTIPLY" prefHeight="4.0" prefWidth="217.0" visible="false" />
+                                    <Button fx:id="btnCollapse_2" mnemonicParsing="false" onAction="#collapse_2">
+                                       <graphic>
+                                          <ImageView fx:id="up_2" fitHeight="17.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assert/icons8_angle_up_512px_1.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                 </children>
+                              </HBox>
+                                        <GridPane fx:id="L_2" hgap="10.0" prefHeight="125.0" prefWidth="377.0" vgap="10.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.6666717529297" minWidth="10.0" prefWidth="142.6666717529297" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="111.33332824707031" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="Impression Cost" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                                <Label text="Finishing Cost" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                                </Label>
+                                                <Label prefHeight="25.0" prefWidth="69.0" text="Profit (%)" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                                </Label>
+                                                <TextField prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Fi_C" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField fx:id="Pr" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="Im_C" alignment="CENTER_RIGHT" onKeyReleased="#typeChecker" prefHeight="31.0" prefWidth="104.0" GridPane.columnIndex="1" />
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" top="20.0" />
+                                    </VBox.margin>
+                                </VBox>
+                        <Separator blendMode="MULTIPLY" prefWidth="200.0" />
+                                <VBox alignment="CENTER">
+                                    <children>
+                                        <Button fx:id="btn_Est" alignment="CENTER" mnemonicParsing="false" onAction="#Est_Action" text="Estimate" VBox.vgrow="ALWAYS">
+                                            <padding>
+                                                <Insets bottom="10.0" left="120.0" right="120.0" top="10.0" />
+                                            </padding>
+                                            <VBox.margin>
+                                                <Insets bottom="20.0" />
+                                            </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assert/icons8_estimates_500px_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                        </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="30.0" />
+                                    </VBox.margin>
+                                </VBox>
+                            </children>
+                            <padding>
+                                <Insets left="20.0" right="30.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+                <VBox HBox.hgrow="ALWAYS">
+                    <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="832.0" spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="504.0" spacing="10.0">
+                           <children>
+                              <Label fx:id="proTitle_" text="Project Name :">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="projectName" text="Label" />
+                           </children>
+                        </HBox>
+                        <Region prefHeight="42.0" prefWidth="117.0" />
+                        <Label fx:id="export_" alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Export" />
+                        <Separator blendMode="MULTIPLY" orientation="VERTICAL" prefHeight="200.0" />
+                        <AnchorPane>
+                           <children>
+                              <GridPane layoutY="5.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button fx:id="btn_Pdf" disable="true" mnemonicParsing="false" onAction="#onPdf" text="PDF">
+                                       <graphic>
+                                          <ImageView fitHeight="23.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assert/icons8_pdf_2_512px_7.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" right="30.0" />
+                     </padding>
+                  </HBox>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="1095.0" prefWidth="859.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="now" alignment="TOP_CENTER" prefHeight="816.0" prefWidth="840.0">
+                           <padding>
+                              <Insets bottom="20.0" top="20.0" />
+                           </padding></VBox>
+                     </content></ScrollPane>
+                    </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+                </VBox>
+            </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

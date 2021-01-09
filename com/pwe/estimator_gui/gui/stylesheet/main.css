@@ -1,0 +1,15 @@
+@import url(variables/reset.css);
+
+#welcomeTitle {
+    -fx-font-size: 45px;
+    -fx-font-weight: bold;
+}
+
+#paper,#period, #book {
+    -fx-font-weight: 800;
+}
+
+#get_help{
+    -fx-background-color: #F46B1A;
+    -fx-font-weight: bold;
+}
